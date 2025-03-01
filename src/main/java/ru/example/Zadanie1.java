@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Zadanie1 {
 
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Введите целое число a: ");
@@ -34,8 +35,13 @@ public class Zadanie1 {
                 System.out.println(a * b);
                 break;
             case "/":
-                System.out.println(a / b);
-                break;
+                if (b != 0) {
+                    System.out.println(a / b);
+                    break;
+                } else {
+                    System.out.println("На ноль делить нельзя!");
+                    break;
+                }
             default:
                 System.out.println("Неправильно указана операция");
         }
